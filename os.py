@@ -14,8 +14,8 @@ onlyfiles = sorted(onlyfiles)
 print(onlyfiles)
 
 for nameFile in onlyfiles:
-    file = open("./os_test/"+nameFile, "r")
-    for line in file:
-        print(nameFile, '->', line)
+    with open("./os_test/"+nameFile, "r") as file:
+        for line in file:
+            print(nameFile, '->', line)
     
     file.close()
